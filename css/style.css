@@ -1,0 +1,115 @@
+/* цвет основного текста #757575*/
+/* вторичный цвет текста #212121 */
+/* цвет акцента 2196f3*/
+/* фон белый  */
+:root {
+  --primary-text-color: rgb(117, 117, 117);
+  --title-text-color: rgb(33, 33, 33);
+  --accent-color: rgb(33, 150, 243);
+  --primary-white-color: rgb(255, 255, 255);
+  --second-background: rgb(245, 244, 250);
+  --footer-background: rgb(47, 48, 58);
+  --border-color-projects: rgb(238, 238, 238);
+  --advantages-background-img: rgb(245, 244, 250);
+  --social-links-svg-main-color: rgb(175, 177, 184);
+}
+
+/* h1 Заголовок h1 */
+
+/* Особенности */
+
+/* Сферы деятельности */
+
+/* Секция наша команда */
+
+/* Футер */
+
+/* Портфолио */
+
+.examples-works {
+  padding: 94px 0;
+}
+
+.project-type {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+.project {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project .item {
+  width: 370px;
+  margin: 0px 30px 30px 0px;
+  border: 1px solid var(--border-color-projects);
+}
+.project .item:nth-child(3n + 3) {
+  margin-right: 0px;
+}
+.project .item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+.project-name {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.examples-works .project-text {
+  padding: 20px 24px;
+}
+
+.item:hover,
+.item:focus {
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--accent-color);
+
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(0);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-item-link:hover .overlay,
+.project-item-link:focus .overlay {
+  transform: translateY(-100%);
+  visibility: visible;
+  pointer-events: auto;
+}
+.project-description {
+  margin: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+.project-item-link:hover .overlay,
+.project-item-link:focus .overlay {
+  transform: translateY(-100%);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Backdrop */
