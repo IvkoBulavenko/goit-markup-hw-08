@@ -1,38 +1,89 @@
 .section-advantages {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
+}
+.advantages-list {
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &-item {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 30px * 3) / 4);
+    }
+
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+      background-color: #f5f4fa;
+      border-radius: 4px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 70px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+.advantages-list-item:nth-child(1) div::before {
+  background-image: url(../../images/antenna.svg);
+}
+
+.advantages-list-item:nth-child(2) div::before {
+  background-image: url(../../images/clock.svg);
+}
+
+.advantages-list-item:nth-child(3) div::before {
+  background-image: url(../../images/diagram.svg);
+}
+
+.advantages-list-item:nth-child(4) div::before {
+  background-image: url(../../images/astronaut.svg);
+}
+
+.advantages-list-item:not(:last-child) {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+  }
+}
+
+.advantages-list-item:nth-last-child(-n + 2) {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
 }
 
 .advantages-title {
+  margin-top: 30px;
   margin-bottom: 10px;
-  color: $primary-text-color;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font(700, 14px, 16px);
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+  color: getColor("title");
 }
-.advantages-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-}
-.advantages-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-.advantages-item {
-  margin-right: 30px;
-  width: 270px;
 
-  & div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $secondary-bg-color;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 30px;
-  }
-  &:last-child {
-    margin-right: 0;
-  }
+.advantages-text {
+  @include font(400, 14px, 24px);
+  letter-spacing: 0.03em;
 }

@@ -3,7 +3,6 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 img {
   display: block;
@@ -26,6 +25,13 @@ li a {
 .link {
   text-decoration: none;
 }
+.list {
+  list-style: none;
+}
+.address {
+  font-style: normal;
+}
+
 .container {
   width: 100%;
   padding: 0 15px;

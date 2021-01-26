@@ -4,7 +4,6 @@
   //     rgba(47, 48, 58, 0.4),
   //     rgba(47, 48, 58, 0.4)
   //   ),
-    url(../images/img-hero.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,40 +11,81 @@
 
   @media screen and (min-width: 320px) and (max-width: 767px) {
     background-image: $grsdient-hero,
-      url();
+      url(../../images/mobile/section-hero/Hero-x1-mob.jpg);
   }
 
   @media screen and (min-width: 768px) {
     background-image: $grsdient-hero,
-      url(../);
+      url(../../images/tablet/section-hero/Hero-x1-tab.jpg);
   }
 
   @media screen and (min-width: 1200px) {
     background-image: $grsdient-hero,
-      url(.././images/desktop/section-hero/Hero-x1-des.jpg);
+      url(../../images/desktop/section-hero/Hero-x1-des.jpg);
   }
 }
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .section-hero {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      background-image: $grsdient-hero,
+        url(../../images/mobile/section-hero/Hero-x2-mob.jpg);
+    }
+
+    @media screen and (min-width: 768px) {
+      background-image: $grsdient-hero,
+        url(../../images/tablet/section-hero/Hero-x2-tab.jpg);
+    }
+
+    @media screen and (min-width: 1200px) {
+      background-image: $grsdient-hero,
+        url(../../images/desktop/section-hero/Hero-x2-des.jpg);
+    }
+  }
+}
+
+.container-hero {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    height: 400px;
+    padding: 118px 45px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 118px 180px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 600px;
+    padding: 200px 240px;
+  }
+}
+
 .hero-title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  @include font(900, 26px, 42px);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 30px;
-  border: none;
+  color: #ffffff;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+  }
 }
 
 .hero-button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  background-color: $accent-color;
-  color: $secondary-text-color;
-  display: inline-block;
   padding: 10px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  height: 50px;
   border-radius: 4px;
-  border: none;
+  @include font(700, 16px, 30px);
+  border-style: none;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: $accent-color;
+  cursor: pointer;
 }
