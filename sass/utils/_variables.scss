@@ -13,3 +13,13 @@ $backdrop-bg-color: rgba(0, 0, 0, 0.2);
 $portfolio-card-border-color: #eeeeee;
 $portfolio-img-hover-color: rgba(33, 150, 243, 0.9);
 $accent-color: #2196f3;
+
+$main-font: Roboto, sans-serif;
+$logo-font: Raleway, sans-serif;
+
+@mixin font($fw, $fs, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh/$fs;
+}
+$grsdient-hero: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
